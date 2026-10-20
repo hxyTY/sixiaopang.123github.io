@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="个人主页，展示我的介绍、技能与作品。">
+  <title>我的个人网站</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      color: #60a5fa;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: radial-gradient(
+        circle at top,
+        #1e3a8a 0,
+        #0b1120 65%
+      );
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      display: grid;
+      place-items: center;
+      font-size: 46px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      max-width: 580px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 11px 25px;
+      border-radius: 8px;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 8%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .about {
+      text-align: center;
+      color: #cbd5e1;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+      gap: 22px;
+    }
+
+    .card {
+      background: #172033;
+      padding: 28px;
+      border: 1px solid #26344b;
+      border-radius: 14px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #60a5fa;
+    }
+
+    .card h3 {
+      color: #93c5fd;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #111827;
+      border-radius: 16px;
+      padding: 40px 20px;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 14px 5%;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 10px;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .hero {
+        min-height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">我的主页</div>
+
+    <nav>
+      <a href="#home">黑料</a>
+      <a href="#about">黑历史</a>
+      <a href="#skills">我的下面</a>
+      <a href="#works">我的正面</a>
+      <a href="#contact">联系我</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="avatar">👨‍💻</div>
+
+      <h1>你好，我是死小胖</h1>
+
+      <p>
+        欢迎来到我的yb网站。
+        这里记录我的学习、成长、技能与作品。
+      </p>
+
+      <a class="btn" href="#about">了解更多</a>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">关于我</h2>
+
+      <p class="about">
+        我正在学习计算机技术和网站开发。
+        我希望通过不断学习，掌握更多实用技能，
+        制作出有趣、实用且美观的网站。
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">我的技能</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>🌐 网站开发</h3>
+          <p>学习 HTML、CSS 和 JavaScript，制作网页。</p>
+        </article>
+
+        <article class="card">
+          <h3>💻 计算机技术</h3>
+          <p>学习 Windows 操作、软件安装和电脑基础知识。</p>
+        </article>
+
+        <article class="card">
+          <h3>🔐 网络安全</h3>
+          <p>学习网络原理、账户安全和合法的安全测试。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2 class="section-title">我的作品</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>个人主页</h3>
+          <p>我的第一个个人网站，展示自我介绍和学习经历。</p>
+        </article>
+
+        <article class="card">
+          <h3>学习笔记</h3>
+          <p>记录编程、电脑操作和网络安全学习心得。</p>
+        </article>
+
+        <article class="card">
+          <h3>未来项目</h3>
+          <p>持续更新我的作品，探索更多网站开发创意。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h2 class="section-title">联系我</h2>
+
+        <p>欢迎交流学习经验与网站开发心得。</p>
+
+        <a class="btn" href="mailto:your-email@example.com">
+          给我发邮件
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 我的个人网站 | 用心学习，不断进步</p>
+  </footer>
+</body>
+</html>
